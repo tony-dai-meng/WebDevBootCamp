@@ -43,7 +43,7 @@ document.addEventListener("keydown", function(e){
     try{
         document.querySelector("."+String(e.key)).click()
     }
-    catch(exep){
-        console.log("No sound there champ! "+ exep)
+    catch(excep){
+        console.log("No sound there champ! "+ excep)
     }
 })

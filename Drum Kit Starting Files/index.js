@@ -35,6 +35,7 @@ for (var i = 0; i < buttonAll.length; i++) {
                 aud.play();
                 break;
         }
+        buttonAnimation(className)
     }
     );
 }
@@ -47,3 +48,12 @@ document.addEventListener("keydown", function(e){
         console.log("No sound there champ! "+ excep)
     }
 })
+
+function buttonAnimation(currentKey){
+    var activebButton = document.querySelector("."+currentKey)
+    
+    activebButton.classList.add("pressed")
+    
+    setTimeout(()=>{activebButton.classList.remove("pressed")}, 200)
+    
+}

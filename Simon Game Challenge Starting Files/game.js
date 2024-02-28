@@ -19,6 +19,7 @@ $("[type='button']").on("click", function () {
     let userChosenColour = this.id;
     userClickedPattern.push(userChosenColour);
     flash($(`#${userChosenColour}`));
+    audioFiles[userChosenColour].currentTime = 0;
     audioFiles[userChosenColour].play();
     let i = userClickedPattern.length-1;
 
@@ -58,7 +59,7 @@ function nextSequence() {
           setTimeout(() => {
             sequenceExcecuted = true;
             inputEnd = false;
-          }, 700); // This should match or exceed the longest delay in flash or sound playback
+          }, 100); // This should match or exceed the longest delay in flash or sound playback
         }
       }, index * 700);
     });

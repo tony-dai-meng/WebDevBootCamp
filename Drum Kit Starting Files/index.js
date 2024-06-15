@@ -35,7 +35,7 @@ for (var i = 0; i < buttonAll.length; i++) {
                 aud.play();
                 break;
         }
-        buttonAnimation(className)
+        buttonAnimation(className);
     }
     );
 }

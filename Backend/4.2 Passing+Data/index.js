@@ -1,6 +1,9 @@
 import express from "express";
 import bodyParser from "body-parser";
-
+/*ifs don't work for EJS :(
+It doesn't scope the variable.
+Use locals.fruits in order to access all variables that get sent over as res.render("ejs_file_name.ejs")
+*/
 const app = express();
 const port = 3000;
 

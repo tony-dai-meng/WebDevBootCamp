@@ -1,4 +1,5 @@
 import express from "express";
+import quill from "quill";
 
 const app = express();
 const port = 3000;
@@ -16,8 +17,8 @@ app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 
-app.get("/about", (req, res) => {
-  res.render("about.ejs");
+app.get("/create", (req, res) => {
+  res.render("create.ejs");
 });
 
 app.get("/contact", (req, res) => {

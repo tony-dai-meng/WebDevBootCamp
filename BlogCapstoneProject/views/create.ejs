@@ -1,0 +1,10 @@
+<%- include("partials/header.ejs") %>
+<h1>Quill demo with EJS</h1>
+<img class="profile" src="images/picture_2024-07-27_17-49-38.jpg" alt="cat profile">
+
+<form action="/create" method="post">
+  <textarea id="default" style="height: 200px; text-align: left !important;"></textarea>
+  <button type="create">Create</button>
+</form>
+
+<%- include("partials/footer.ejs") %>

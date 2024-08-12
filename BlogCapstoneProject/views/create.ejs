@@ -2,9 +2,29 @@
 <h1>Quill demo with EJS</h1>
 <img class="profile" src="images/picture_2024-07-27_17-49-38.jpg" alt="cat profile">
 
-<form action="/create" method="post">
+
   <textarea id="default" style="height: 200px; text-align: left !important;"></textarea>
-  <button type="create">Create</button>
-</form>
+  <button id="createButton" type="create">Create</button>
+
+<script>
+  $(document).ready(function() {
+      $('#createButton').on('click', function() {
+        let message = tinymce.get('default').getContent()
+        $.ajax({
+          url: '/create',
+          type: 'POST',
+          contentType: 'application/json',
+          data: JSON.stringify({ message: 'Button clicked', innerHTML: message }),
+          success: function(response) {
+            console.log(response.message);
+            window.location.href = '/';
+          },
+          error: function(error) {
+            console.error('Error:', error);
+          }
+        });
+      });
+    });
+</script>
 
 <%- include("partials/footer.ejs") %>

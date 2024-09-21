@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "3.2-http-requests": "file:",
     "express": "^4.19.2"
   }
 }

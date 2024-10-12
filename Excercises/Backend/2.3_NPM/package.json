@@ -1,0 +1,17 @@
+{
+  "name": "learning-npm",
+  "version": "1.0.0",
+  "description": "Learning about npm",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tony Dai",
+  "license": "ISC",
+  "dependencies": {
+    "learning-npm": "file:",
+    "sillyname": "^0.1.0",
+    "superheros": "^1.0.0"
+  }
+}
